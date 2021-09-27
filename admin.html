@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADMIN PORTAL</title>
+<link rel="stylesheet" href="admin.css">
+<script src="admin.js"></script>
+</head>
+<body style="text-align: center;">
+
+<h1 style="font-family: 'Ephesis', cursive; font-size: 50px;">Admin Portal</h1>
+
+<form name="admin" action="/cgi-bin/admin.py" onsubmit="onSub()" method="POST">
+    <label for="uid">ID</label><br>
+    <input type="text" id="id_uid" name="uid"><br>
+    <label for="name">NAME</label><br>
+    <input type="text" id="id_name" name="name"><br>
+    <label for="dob">DATE OF BIRTH</label><br>
+    <input type="date" id="id_dob" name="dob"><br>
+    <label for="dpt">DEPERTMENT</label><br>
+    <select id="depertment" id="id_dpt" name="dpt">
+        <option value="cse">CSE</option>
+        <option value="it">IT</option>
+        <option value="mechanical">MECHANICAL</option>
+        <option value="electrical">ELECTRICAL</option>
+    </select> <br> <br>
+    <input class="submit" type="submit" value="SUBMIT">
+</form> 
+
+</body>
+</html> 
