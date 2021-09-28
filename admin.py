@@ -4,27 +4,16 @@ import os.path
 from PIL import Image
 
 
-def _input():
+def append(num, nm, db, dt):
     # list of uid, name, date of birth and depertment
     uid = []
     name = []
     dob = []
     dept = []
-    # accepting all the data and appending into the lists
-    tuid = int(input())
-    tname = input()
-    tdob = input()
-    tdept = input()
-    img_dir = input()
-    uid.append(tuid)
-    name.append(tname)
-    dob.append(tdob)
-    dept.append(tdept)
-    append(uid, name, dob, dept)
-    img(uid, img_dir)
-
-
-def append(uid, name, dob, dept):
+    uid.append(num)
+    name.append(nm)
+    dob.append(db)
+    dept.append(dt)
     # dictionary of lists
     dict = {'id': uid, 'name': name, 'dob': dob, 'dept': dept}
     # dictionary into dataframe
@@ -34,7 +23,8 @@ def append(uid, name, dob, dept):
         df.to_csv('data.csv', mode='a', index=False, header=False)
     else:
         df.to_csv('data.csv', index=False)
-#       print(df.to_string())
+
+    return "Success"
 
 
 def img(uid, path_img):
@@ -53,11 +43,3 @@ def img(uid, path_img):
     # Save the cropped image
     img.save(im_dir + img_path, quality=90)
     ########################################################################################
-
-
-def main():
-    _input()
-
-
-if __name__ == "__main__":
-    main()

@@ -1,3 +1,3 @@
 function onSub() {
-    alert("Submitted")
+    alert("Success")
 }
