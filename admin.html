@@ -9,16 +9,16 @@
 
 <h1 style="font-family: 'Ephesis', cursive; font-size: 50px;">Admin Portal</h1>
 
-<form name="admin" action="http://192.168.0.5:8080/post" method="POST">
+<form name="admin" action="http://192.168.0.5:8080/post" method="POST"  enctype="multipart/form-data">
     <div> 
         <img src="avatar.bmp" alt="Avatar" class="avatar"> 
     </div>
-    <label for="pic">Pic</label>
-    <input type="file" name="pic"> <br>
+    <label for="file">Avatar</label> <br>
+    <input type="file" name="file"> <br>
     <label for="uid">ID</label><br>
-    <input type="text" name="uid"><br>
+    <input type="text" name="uid" placeholder="123456"><br>
     <label for="name">NAME</label><br>
-    <input type="text" name="name"><br>
+    <input type="text" name="name" placeholder="Full Name"><br>
     <label for="dob">DATE OF BIRTH</label><br>
     <input type="date" name="dob"><br>
     <label for="dpt">DEPERTMENT</label><br>

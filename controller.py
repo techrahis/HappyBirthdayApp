@@ -1,6 +1,7 @@
 # Using flask to make an api
 # import necessary libraries and functions
 from flask import Flask, jsonify, request, redirect
+from werkzeug.utils import secure_filename
 from admin import *
 
 # creating a Flask app
@@ -15,12 +16,15 @@ def home():
 @app.route('/post', methods=['POST'])
 def disp():
     if request.method == 'POST':
-        # return redirect(url_for('index'))
+        f = request.files['file']
+        f.filename = "temp.jpg"
+        f.save(secure_filename(f.filename))
         uid = request.form['uid']
         name = request.form['name']
         dob = request.form['dob']
         dpt = request.form['dpt']
         append(uid, name, dob, dpt)
+        img(uid)
         return redirect("http://127.0.0.1:5500/")
 
 
