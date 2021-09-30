@@ -2,7 +2,10 @@
 # import necessary libraries and functions
 from flask import Flask, jsonify, request, redirect
 from werkzeug.utils import secure_filename
-from admin import *
+from flask import send_file
+from datetime import date
+from registerModel import *
+from fetchModel import *
 
 # creating a Flask app
 app = Flask(__name__)
@@ -28,6 +31,22 @@ def disp():
         return redirect("http://127.0.0.1:5500/")
 
 
+@app.route('/fetch', methods=['GET'])
+def fetch():
+    today = date.today()
+    # YY/mm/dd
+    dt = today.strftime("%Y-%m-%d")
+    response = jsonify(fetchMovie(dt))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+
+@app.route("/data/photo/<path:path>")
+def get_image(path):
+    filename = 'data/photo/'+path+'.jpg'
+    return send_file(filename, mimetype='image/jpg')
+
+
 # driver function
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="127.0.0.1", port=8080)

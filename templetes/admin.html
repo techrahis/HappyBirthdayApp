@@ -2,19 +2,19 @@
 <html>
 <head>
 <title>ADMIN PORTAL</title>
-<link rel="stylesheet" href="admin.css">
-<script src="admin.js"></script>
+<link rel="stylesheet" href="/templetes/css/admin.css">
+<script src="templates/js/admin.js"></script>
 </head>
 <body style="text-align: center;">
 
 <h1 style="font-family: 'Ephesis', cursive; font-size: 50px;">Admin Portal</h1>
 
-<form name="admin" action="http://192.168.0.5:8080/post" method="POST"  enctype="multipart/form-data">
+<form name="admin" action="http://127.0.0.1:8080/post" method="POST"  enctype="multipart/form-data">
     <div> 
-        <img src="avatar.bmp" alt="Avatar" class="avatar"> 
-    </div>
-    <label for="file">Avatar</label> <br>
-    <input type="file" name="file"> <br>
+        <img src="/assets/avatar.bmp" alt="Avatar" class="avatar"> 
+    </div> 
+    <label for="file">Profile Picture</label> <br>
+    <input type="file" name="file" accept=".jpg"> <br> <br>
     <label for="uid">ID</label><br>
     <input type="text" name="uid" placeholder="123456"><br>
     <label for="name">NAME</label><br>

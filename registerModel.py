@@ -27,11 +27,12 @@ def append(num, nm, db, dt):
     dob.append(db)
     dept.append(dt)
     # dictionary of lists
-    dict = {'id': uid, 'name': name, 'dob': dob, 'dept': dept}
+    dict = {'dob': dob, 'id': uid, 'name': name, 'dept': dept}
     # dictionary into dataframe
     df = pd.DataFrame(dict)
 
     if os.path.exists('data/db.csv'):
+        # df.to_csv('data/db.csv', mode='a', index=False, header=False)
         df.to_csv('data/db.csv', mode='a', index=False, header=False)
     else:
         df.to_csv('data/db.csv', index=False)
