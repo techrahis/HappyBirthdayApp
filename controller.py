@@ -28,7 +28,7 @@ def disp():
         dpt = request.form['dpt']
         append(uid, name, dob, dpt)
         img(uid)
-        return redirect("http://127.0.0.1:5500/")
+        return redirect("http://127.0.0.1:5502/")
 
 
 @app.route('/fetch', methods=['GET'])

@@ -11,7 +11,7 @@ font-family: 'Poppins', sans-serif;
 .button {
   width: 210px;
   margin-top: 10px;
-  background-color: #01950d; /* Green */
+  background-color: rgb(6, 163, 211);/* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -23,7 +23,19 @@ font-family: 'Poppins', sans-serif;
 }
 
 .button:hover{
-    background-color: #018105;
+    background-color: rgb(0, 120, 156);
     color: white;
     border-radius: 3px;
 }
+
+.footer{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.fa-github,.fa-envelope,.fa-instagram,.fa-facebook,.fa-linkedin,.fa-twitter,.fa-glove{
+color: white;
+margin: 0.5em;
+text-decoration: none;
+}
+

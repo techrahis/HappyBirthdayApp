@@ -1,11 +1,15 @@
 import csv
 
+from werkzeug.wrappers import response
+
 
 def fetchMovie(name):
     ### Algorithm to search date and return a list of data ###
     ###########################################################
+    count = 0
+    res = {}
     data = []
-    data2 = {"dob": "", "id": "", "name": "", "dept": "", }
+    # data2 = {"dob": "", "id": "", "name": "", "dept": ""}
     with open("data/db.csv") as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
@@ -19,15 +23,15 @@ def fetchMovie(name):
 
     # print(col)
 
-    if name in col:
+    dt = name[5:]
+
+    if dt in col:
         for x in range(0, len(data)):
-            if name == data[x][0]:
-                data2["dob"] = data[x][0]
-                data2["id"] = data[x][1]
-                data2["name"] = data[x][2]
-                data2["dept"] = data[x][3]
-                return(data2)
+            if dt == data[x][0]:
+                res[count] = data[x]
+                count = count + 1
+        return(res)
 
     else:
-        return("Number does not exist")
+        return 0
     ###########################################################

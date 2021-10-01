@@ -24,7 +24,7 @@ def append(num, nm, db, dt):
     dept = []
     uid.append(num)
     name.append(nm)
-    dob.append(db)
+    dob.append(db[5:])
     dept.append(dt)
     # dictionary of lists
     dict = {'dob': dob, 'id': uid, 'name': name, 'dept': dept}

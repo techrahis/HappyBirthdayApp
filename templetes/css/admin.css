@@ -41,7 +41,7 @@ input[type="file"]::file-selector-button:hover {
 .button {
   width: 210px;
   margin-top: 10px;
-  background-color: #01950d; /* Green */
+  background-color: rgb(0, 120, 156);/* Green */
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -51,7 +51,7 @@ input[type="file"]::file-selector-button:hover {
 }
 
 .button:hover {
-  background-color: #018105;
+  background-color: rgb(0, 120, 156);
   color: white;
 }
 input[type="text"] {
@@ -85,7 +85,18 @@ input[type="submit"]:hover {
   border: 1;
   background-color: black;
   color: white;
-  border-color: rgb(1, 119, 31);
+  border-color: rgb(0, 120, 156);
   width: 90px;
   border-radius: 3px;
+}
+
+.footer{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.fa-github,.fa-envelope,.fa-instagram,.fa-facebook,.fa-linkedin,.fa-twitter,.fa-glove{
+color: white;
+margin: 0.5em;
+text-decoration: none;
 }
